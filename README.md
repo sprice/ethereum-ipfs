@@ -33,7 +33,7 @@ $ geth account new
 ```
 Create node using custom genesis file
 ```SHELL
-$ geth init CustomGenesis.json
+$ geth init /full/path/to/CustomGenesis.json
 $ geth --unlock=<address> --rpc --rpccorsdomain = "*" --rpcport="8545" console
 ```
 
