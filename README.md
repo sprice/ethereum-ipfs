@@ -17,7 +17,7 @@ examples below, but any other file types could be used as well]
 ## Requirements
 
 1. An Ethereum node with one or more accounts unlocked (e.g, `--unlock 0`), RPC 
-enabled (`--rpc`) and the proper RPC CORS set up (e.g, `--rpccorsdomain = "*"`)
+enabled (`--rpc`) and the proper RPC CORS set up (e.g, `--rpccorsdomain = "*"`). 
 2. An IPFS node that doesn't block API calls from external origins (more on this 
 below)
 3. A modern web browser (preferably Opera) //! opinion detected :)
@@ -26,6 +26,16 @@ below)
 
 Check out [this guide](https://github.com/ledgerlabs/ethereum-getting-started/wiki/local-node) 
 if you want to run a local Ethereum node.
+
+Create account using 
+```SHELL
+$ geth account new
+```
+Create node using custom genesis file
+```SHELL
+$ geth init CustomGenesis.json
+$ geth --unlock=<address> --rpc --rpccorsdomain = "*" --rpcport="8545" console
+```
 
 ### Local IPFS node
 
