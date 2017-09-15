@@ -7,9 +7,9 @@
         // Config
         var ipfsHost    = 'localhost',
             ipfsAPIPort = '5001',
-            ipfsWebPort = '8080',
-            web3Host    = 'localhost',
-            web3Port    = '8545';
+            ipfsWebPort = '8085',
+            web3Host    = 'http://localhost',
+            web3Port    = '8101';
 
         // IPFS
         var ipfs = window.IpfsApi(ipfsHost, ipfsAPIPort)
@@ -17,7 +17,7 @@
             if (err) {
                 console.error(err);
             } else {
-                console.log("IPFS - connected to " + response.Strings.length + " peers");
+                console.log("IPFS - connected to " + response.Peers.length + " peers");
                 console.log(response);
             }
         });
